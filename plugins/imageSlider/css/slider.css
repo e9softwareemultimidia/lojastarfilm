@@ -1,0 +1,190 @@
+/* ==========================================================================
+		Slider core styles
+===========================================================================*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider-container {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slider {
+  position: relative;
+
+  width: 9999px;
+}
+.slider:before,
+.slider:after {
+  display: table;
+
+  content: ' ';
+}
+.slider:after {
+  clear: both;
+}
+.slider div {
+  position: relative;
+
+  float: left;
+
+  margin: 0;
+  padding: 0;
+}
+.slider div img {
+  /* display: block; */
+
+  max-width: 100%;
+  height: auto;
+}
+.act,
+#prev > span,
+#next > span,
+#slider-nav > a {
+  background: url(../images/arrows2.png) no-repeat;
+}
+#next > span,
+#prev > span {
+  display: block;
+  width: 16px;
+  height: 24px;
+}
+/* Arrows */
+#next > span {
+  background-position: -20px 0;
+}
+#prev > span {
+  background-position: 0 0;
+}
+#next,
+#prev {
+  position: absolute;
+  top: 50%;
+
+  margin-top: -20px;
+  padding: 10px 15px;
+
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  border-radius: 5px;
+  /* background: rgba(0, 0, 0, .39); */
+  background-color: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000'); /* ie8 */
+       -o-user-select: none;
+}
+#prev {
+  left: 10px;
+}
+#next {
+  right: 10px;
+}
+.caption {
+  position: absolute;
+  bottom: -1px;
+
+  /* display: block; */
+  display: none;
+
+  width: 100%;
+  padding: 10px 10px 25px;
+
+  color: #fff;
+
+  text-align: center;
+
+  font-size: 1.5rem;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+  background: rgba(0, 0, 0, .60);
+
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#99000000', endColorstr='#99000000'); /* ie8 */
+}
+.caption a {
+  display: block;
+
+  color: #fff;
+}
+.slider-nav {
+  line-height: 30px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+
+  text-align: center;
+  /*background: #323232;*/
+  /*opacity: .9;*/
+
+  filter: alpha(opacity=90); /* ie8 */
+}
+.slider-nav a {
+  display: inline-block;
+
+  width: 12px;
+  height: 12px;
+  margin: 0 3px;
+
+  -webkit-transition: background .5s ease;
+     -moz-transition: background .5s ease;
+       -o-transition: background .5s ease;
+          transition: background .5s ease;
+
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.slider-nav .active {
+  width: 12px;
+  height: 12px;
+
+  background: #900;
+}
+@media (max-width: 768px) {
+  .caption {
+    font-size: 1.0rem;
+    /* display: none; */
+  }
+
+  .act,
+  #prev > span,
+  #next > span,
+  #slider-nav > a {
+    background: url(../images/arrows2.png) no-repeat;
+  }
+  #next > span,
+  #prev > span {
+    margin-top:80%;
+    display: none !important;
+  }
+
+  #next > span {
+    background-position: -20px 0;
+  }
+  #prev > span {
+    background-position: 0 0;
+  }
+
+  #prev, #next {
+  }
+}

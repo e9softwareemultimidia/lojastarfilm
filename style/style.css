@@ -1,0 +1,588 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #d30; */
+    background-color: #222;
+    color: #efefef;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#header {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: #600;
+    color: #fff;
+}
+
+#header #logo {
+    flex: 30%;
+    background-color: inherit;
+}
+
+#logo a {
+    background-color: inherit;
+}
+
+.logomarca {
+    width: auto;
+    height: 80px;
+    padding: 10px 30px;
+    background-color: inherit;
+}
+
+#header #menu{
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+    color:inherit; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#header #menu a{
+    display: block;
+    margin: 10px;
+    margin-left:0px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 0.2s;
+    background-color: inherit;
+    color:inherit;
+    border-color:#900;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
+}
+
+#header #menu a:hover, #header #menu a:active{
+    /* border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color:#fff; */
+    padding-bottom: 8px;
+    background-color: inherit;
+    color:inherit;
+    text-shadow: 3px 3px 2px #222;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#content #quem-somos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    /* font-weight: bold; */
+    padding: 30px 10px 10px 10px;
+    border-bottom: 2px;
+    border-color: #900;
+    border-width: 0px 0px 3px 0px;
+    border-style: solid;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#quemsomos-content {
+    width: 90%;
+    font-size: 1.0rem;
+    text-align: center;
+    text-justify: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.quemsomos-content-description p{
+    width: 80%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#servicos-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#servicos-content .servico {
+    display: flex;
+    flex-flow: column wrap;
+    flex:30%;   
+    margin: 20px;
+    margin-left:0px;
+    text-align: center;
+    font-size: 1.0rem;
+    max-width: 358px;
+}
+
+#servicos-content .servico img{
+    /* width: 50%; */
+    height: 300px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+#servicos-content .servico img[alt="marketing"] {
+    /* width: 40%; */
+}
+
+.servico-header {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.servico-text {
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+}
+
+#parceiros-content{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: center;
+    align-items: center;
+    /* background-color: #222; */
+    padding:20px;
+}
+
+#parceiros-content .parceiro{
+    flex: 25%;
+    max-width: 20%;
+    margin-top: 10px;
+    background-color: inherit;
+}
+
+#parceiros-content .parceiro a{
+    background-color: inherit;
+}
+
+#parceiros-content .parceiro a img{
+    max-width: 100px;
+    margin-top: 10px;
+    background-color: inherit;
+}
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 0px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: transparent; /*Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0px 20px 0px 20px; /* Some padding */
+    border-radius: 50%; /* Rounded corners */
+    font-size: 50px; /* Increase font size */
+  }
+  
+  /* #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  /* } */ 
+
+  .fa {
+      background-color: transparent;
+      color: #777;
+  }
+
+  #contact-bar {
+      color: #fff;
+      text-align: end;
+      /* background-color: #222; */
+      padding: 10px;
+  }
+  #contact-bar a{
+    color: #fff;
+    text-decoration: none;
+    background-color:inherit;
+    margin: 10px;
+  }
+
+  #contact-bar img{
+    padding-top:10px;
+    width: 20px;
+    height: auto;
+    background-color: inherit;
+  }
+
+  nav,
+.navbar-toggle {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 10px;
+}
+
+nav {
+  position: fixed;
+  z-index: 10;
+  /* background-color: rgba(231,76,60, 0.95); */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: table;
+  color: white;
+}
+
+.nav-hide { display: none; }
+
+nav ul {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 0 !important;
+  background-color: #222;
+}
+
+nav ul li { 
+    list-style: none; 
+    background-color: inherit;
+}
+
+nav ul li a {
+  font-size: 35pt;
+  color: #fff;
+  font-weight: bolder;
+  text-decoration: none;
+  background-color: inherit;
+  margin-top: 100px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.navbar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    z-index: 20;
+    cursor: pointer;
+    background-color:transparent;
+    display: none;
+  }
+  
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .navbar-on .bar1,
+  .navbar-on .bar2,
+  .navbar-on .bar3 { background-color: #fff; }
+  
+  .navbar-on .bar1 {
+    transform-origin: 10% 40%;
+    transform: rotate(45deg);
+  }
+  
+  .navbar-on .bar3 {
+    transform-origin: 10% 40%;
+    transform: rotate(-45deg);
+  }
+  
+  .navbar-on .bar2 { background-color: transparent; }
+
+  #equipe {
+      margin-top: 30px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: flex-start;
+  }
+  .membro {
+      flex: 20%;
+      max-width: 35%;
+  }
+  .membro img {
+      width: 50%;
+      border-radius:50%;
+      filter: grayscale(100%);
+      transition: 0.3s;
+      margin-top: 10px;
+  }
+
+  .membro img:hover {
+    filter:grayscale(0%);
+    box-shadow: 2px 2px 10px #222;
+}
+
+  .membro-header {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  .membro-content {
+    font-size: 1.0rem;
+  }
+
+  #contato-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  #form-contato {
+      width: 60%;
+      margin-top: 30px;
+      max-width: 768px;
+  }
+  #form-contato .form-field{
+      width: 100%;
+      margin: 10px 10px 10px 0px;
+      padding: 10px;
+  }
+
+  .form-field input, .form-field textarea {
+      width: 100%;
+      outline: none;
+      border: none;
+      border-bottom: 5px solid #600;
+      background: #fff;
+      line-height: 100%;
+      color: #555;
+      font-size: 1.0rem;
+      line-height: 1.5rem;
+      padding: 15px;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form-button {
+      width: 50%;
+      background-color: #600;
+      padding: 10px;
+      margin: 10px 10px 10px 10px;
+      color: #fff;
+      font-size: 1.0rem;
+      font-weight: bold;
+      border: 2px solid #600;
+      transition: 0.3s;
+  }
+
+  .form-button:hover {
+    background-color: #900;
+    color: #fff;
+    border: 2px solid #900;
+  }
+
+  #footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      padding-bottom : 20px;
+  }
+
+  #footer, .footer-content,  .footer-content p, footer-social {
+      background-color: #600;
+      color: #fff;
+  }
+
+  .footer-content {
+      flex: 50%;
+      padding: 20px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+  }
+
+  #footer-social-media {
+      background-color: inherit;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+  }
+
+  #footer-menu {
+      text-transform: uppercase;
+      background-color: inherit;
+      color: #fff;
+  }
+
+  #footer-menu-header, .footer-header {
+      text-transform: uppercase;
+      background-color: inherit;
+      font-weight: bold;
+      color: inherit;
+  }
+
+  #footer-menu-content , #footer-menu-content #menu, #footer-menu-content #menu a {
+      background-color: inherit;
+      color: #fff;
+  }
+
+  #footer-menu-content #menu a {
+      margin: 5px;
+      font-size: 0.9rem;
+  }
+
+  #footer-social-media-icons, #footer-social-media-icons a, #footer-social-media-icons a img {
+      background-color: inherit;
+  }
+
+  #footer-social-media-icons a img {
+      width: 30px;
+      height: auto;
+      margin: 5px;
+      margin-top: 10px;
+  }
+
+  #header-social {
+      flex: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  
+  #header-social, #header-social a, #header-social a img {
+      background-color: #600;
+  }
+
+  #header-social a {
+      width: 70px;
+  }
+
+  #header-social a img {
+      width: 30px;
+      margin: 5px;
+  }
+
+@media screen and (max-width:870px)
+{
+    #header-social {
+        display: none;
+    }  
+}
+@media screen and (max-width:768px)
+{
+    #header {
+        width: 100%;
+        z-index: 10;
+        position:fixed;
+    }
+
+    #content {
+        padding-top: 100px;
+    }
+
+    #header-social {
+        display: none;
+    }
+
+    #header #logo {
+        flex: 100%;
+    }
+    
+    #header #menu{
+        display: none;
+    }
+
+    #servicos-content {
+        flex-direction: column;
+    }
+
+    #servicos-content .servico {
+        flex: 100%;
+    }
+
+    .quemsomos-content-description p{
+        width: 90%;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    #parceiros-content{
+        flex-flow: column wrap;
+    }
+
+    #parceiros-content .parceiro{
+        max-width: 60%;
+    }
+
+    #parceiros-content .parceiro a img{
+        max-width: 250px;
+        margin-top: 10px;
+        background-color: inherit;
+    }
+
+    #equipe {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .membro {
+        margin-top: 30px;
+        flex: 70%;
+        max-width: 100%;
+    }
+
+    #form-contato {
+        width: 80%;
+    }
+
+    #footer {
+        flex-flow: column wrap;
+        background-color: #600;
+    }
+
+    #footer-endereco, #footer-social, .footer-content {
+        flex: 100%;
+    }
+
+    #footer-social {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
